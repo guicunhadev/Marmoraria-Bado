@@ -15,14 +15,14 @@
 <body>
 
 <!-- ---------------------------------Header Section----------------- -->
-    <header>
+    <header id="header">
         <nav>
             <div class="nav__logo"><a href="#"><img src="img/bado-logo-bg.png" alt="logo"></a></div>
             <ul class="nav__links" id="nav-links">
                 <li class="link"><a href="#home">Início</a></li>
-                <li class="link"><a href="#about">Sobre</a></li>
+                <li class="link"><a href="#stats">Sobre</a></li>
                 <li class="link"><a href="#gallery">Galeria</a></li>
-                <li class="link"><a href="#footer">Informações</a></li>
+                <li class="link"><a href="#subscribe">Contato</a></li>
             </ul>
             <div class="nav__menu__btn" id="menu-btn">
                 <span><i class="ri-menu-line"></i></span>
@@ -30,10 +30,11 @@
         </nav>
         <div class="section__container header__container" id="home">
             <h1>Qualidade em Produtos<br>e Serviços</h1>
+            <a href="https://wa.me//5515991951459?text=Tenho%20interesse%20em%20fazer%20um%20orçamento." target="_blank">
             <button class="btn btn__secondary">
                 Atendimento
                 <span><i class="ri-arrow-right-double-line"></i></span>
-            </button>
+            </button></a>
         </div>
     </header>
 
@@ -141,14 +142,16 @@
                      sem deixar de lado nosso padrão único.
                 </p>
                 <div class="banner__btns">
+                    <a href="#gallery">
                     <button class="btn btn__secondary">
                         Ver Projetos
                         <span><i class="ri-arrow-right-double-line"></i></span>
-                    </button>
+                    </button></a>
+                    <a href="https://wa.me//5515991951459?text=Tenho%20interesse%20em%20fazer%20um%20orçamento." target="_blank">
                     <button class="btn btn__primary">
                         Falar com Atendimento
                         <span><i class="ri-arrow-right-double-line"></i></span>
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -359,8 +362,9 @@
             <h4>Links Rápidos</h4>
             <div class="footer__links">
                 <a href="#header">Início</a>
-                <a href="#about">Sobre Nós</a>
+                <a href="#stats">Sobre Nós</a>
                 <a href="#gallery">Galeria</a>
+                <a href="#subscribe">Contato</a>
             </div>
         </div>
         <div class="footer__col">
@@ -386,6 +390,31 @@
 
     </div>
   </footer>
+        <!-- --------------WhatsApp link----------- -->
+
+        <div class="whats">
+            <a href="https://wa.me//5515991951459?text=Tenho%20interesse%20em%20fazer%20um%20orçamento." target="_blank">
+                <img src="img/whatsapp-logo-png.png" alt="Fale Comigo">
+            </a>
+        </div>
+    
+        <!-- --------------Cookies Msg----------- -->
+    
+        <div class="cookies-msg" id="cookies-msg">
+          <div class="cookies-txt">
+            <p>
+              Este site usa cookies e tecnologias afins, que são pequenos arquivos ou pedaços de texto baixados
+              para um aparelho quando o visitante acessa um website ou aplicativo. Ao utilizar nosso site você está de 
+              acordo com a utilização dos cookies para te proporcionar uma melhor experiência.
+            </p>
+            <div class="cookies-btn">
+              <button onclick="aceito()">Aceito</button>
+            </div>
+          </div>
+        </div>
+    
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
