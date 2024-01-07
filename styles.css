@@ -339,10 +339,9 @@ nav {
 }
 
 .gallery .image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .gallery .image-container .image {
@@ -580,11 +579,56 @@ nav {
 
 
 /* ---------------Responsive--------------- */
+@media (width < 1300px){
+    .gallery .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media (width < 900px){
-    .nav__links {
-        gap: 1.5rem;
-    }
+    nav {
+        position: fixed;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--black);
+        z-index: 99;
+      }
+    
+      .nav__links {
+        position: absolute;
+        left: 0;
+        top: 83px;
+        padding: 2rem;
+        width: 100%;
+        flex-direction: column;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 0.5s;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    
+      .nav__links .link a {
+        opacity: 0;
+      }
+    
+      .nav__links.open .link a {
+        opacity: 1;
+      }
+    
+      .nav__links.open {
+        transform: scaleY(1);
+      }
+    
+      .nav__menu__btn {
+        display: block;
+      }
+
+        
+    .header__container h1 {
+        margin-top: 4rem;
+        font-size: 3.5rem;
+      }
 
     .about__grid {
         grid-template-columns: repeat(1, 1fr);
@@ -600,48 +644,17 @@ nav {
         gap: 1rem;
     }
 
+    .gallery .image-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .footer__container {
         grid-template-columns: 2fr 1fr;
     }
 }
 
 @media (width < 600px) {
-    nav {
-      position: fixed;
-      width: 100%;
-      padding: 1rem;
-      background-color: var(--black);
-      z-index: 99;
-    }
-  
-    .nav__links {
-      position: absolute;
-      left: 0;
-      top: 83px;
-      padding: 2rem;
-      width: 100%;
-      flex-direction: column;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: 0.5s;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-  
-    .nav__links .link a {
-      opacity: 0;
-    }
-  
-    .nav__links.open .link a {
-      opacity: 1;
-    }
-  
-    .nav__links.open {
-      transform: scaleY(1);
-    }
-  
-    .nav__menu__btn {
-      display: block;
-    }
+ 
   
     .header__container h1 {
       margin-top: 4rem;
@@ -658,5 +671,11 @@ nav {
   
     .subscribe__container .btn {
       width: 100%;
+    }
+  }
+
+  @media (width < 400px) {
+    .gallery .image-container .image {
+        max-width: 260px;
     }
   }

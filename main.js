@@ -28,4 +28,12 @@ const swiper = new Swiper(".swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-})
+});
+
+// -------------TESTE SCROLL NAVBAR---------
+
+
+window.addEventListener("scroll", function(){
+    let header = document.querySelector('#header')
+    header.classList.toggle('rolagem', window.scrollY > 0)
+});
