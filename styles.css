@@ -108,10 +108,11 @@ header {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.8)
     ),
-    url("img/header.jpg");
+    url("img/header.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 nav {
@@ -120,14 +121,12 @@ nav {
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
 }
 
 
-.nav__logo a {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
+.nav__logo a img {
+    max-width: 300px;
 }
 
 .nav__links {
@@ -152,6 +151,7 @@ nav {
 .nav__menu__btn {
     display: none;
     font-size: 1.5rem;
+
 }
 
 .header__container {
@@ -285,7 +285,7 @@ nav {
         rgba(0,0,0,.6),
         rgba(0,0,0,.6)
     ),
-    url("img/banner.jpg");
+    url("img/banner.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -310,6 +310,74 @@ nav {
     gap: 2rem;
 }
 
+/* ---------------------GALLERY TESTE---------------- */
+
+.gallery {
+    min-height: 100vh;
+    background: var(--secondary-color-light);
+    padding-bottom: 50px;
+}
+
+
+
+.gallery .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.gallery .controls .buttons {
+    margin: 0.2rem;
+}
+
+.gallery .controls .buttons.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.gallery .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .image-container .image {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    margin: 20px;
+}
+
+.gallery .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery .image-container .image:hover img {
+    transform: scale(1.2);
+}
+
+
+/* ---------------------GALLERY TESTE---------------- */
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------Subscribe Section------------ */
 
 .subscribe {
@@ -318,7 +386,7 @@ nav {
         rgba(0,0,0,.6),
         rgba(0,0,0,.6)
     ),
-    url("img/subscribe.jpg");
+    url("img/subscribe.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -366,9 +434,8 @@ nav {
     background-color: var(--secondary-color-light);
 }
 
-.customer__container .para {
+.customer__container .section__header {
     margin-block: 1rem 4rem;
-    color: var(--text-light);
 }
 
 .swiper {
@@ -425,6 +492,20 @@ nav {
     font-weight: 400;
     color: var(--text-light);
 }
+
+/* --------------- Button swipper TESTE---------------- */
+
+
+.swiper-button-prev, .swiper-button-next {
+    background-color: var(--primary-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    color: var(--secondary-color-light);
+    font-size: 10px;
+}
+/* ---------------TESTE---------------- */
+
 
 /* ------------------Footer Section--------------- */
 
@@ -536,7 +617,7 @@ nav {
     .nav__links {
       position: absolute;
       left: 0;
-      top: 68px;
+      top: 83px;
       padding: 2rem;
       width: 100%;
       flex-direction: column;
