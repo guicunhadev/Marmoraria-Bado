@@ -579,10 +579,10 @@ nav {
 
 /* --------------WhatsApp Button------ */
 .whats {
-    width: 60px;
+    width: 55px;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 10px;
     z-index: 9999;
 }
 
