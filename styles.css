@@ -613,7 +613,7 @@ nav {
 }
 
 .cookies-msg .cookies-txt p {
-  color: var(--text-dark);
+  color: var(--black);
 }
 
 .cookies-msg .cookies-btn {
