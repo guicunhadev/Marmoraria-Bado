@@ -636,14 +636,14 @@ nav {
 
 
 /* ---------------Responsive--------------- */
-@media (width < 1300px){
+@media only screen and (max-width: 1300px) {
     .gallery .image-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
-@media (width < 900px){
+@media only screen and (max-width: 900px){
     nav {
         position: fixed;
         width: 100%;
@@ -706,7 +706,7 @@ nav {
     }
 }
 
-@media (width < 600px) {
+@media only screen and (max-width: 600px) {
  
   
     .header__container h1 {
@@ -736,10 +736,16 @@ nav {
     .swiper-button-prev, .swiper-button-next {
         display: none;
     }
+    .footer__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
   }
 
-  @media (width < 400px) {
+  @media only screen and (max-width: 400px) {
     .gallery .image-container .image {
         max-width: 260px;
+    }
+    .banner__btns {
+        flex-wrap: wrap;
     }
   }
