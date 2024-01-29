@@ -11,28 +11,6 @@ menuBtn.addEventListener("click", (e) => {
     menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
-// -------------Cookies----------------
-
-var msgCookies = document.getElementById('cookies-msg')
-
-function aceito(){
-    localStorage.lgpd = "sim"
-    msgCookies.classList.remove('mostrar')
-}
-
-if(localStorage.lgpd == 'sim'){
-    msgCookies.classList.remove('mostrar')
-}else{
-    msgCookies.classList.add('mostrar')
-}
-
-
-
-navLinks.addEventListener("click", (e) => {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
-
 
 // -- Initialize Swiper --
 
@@ -111,5 +89,25 @@ form.addEventListener("submit", (e) => {
   return false;
 });
 
-// ------------Galery Magnific Popup--------------
+// ------------Cookies--------------
+
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#f5f5f5",
+      "text": "#000000"
+    },
+    "button": {
+      "background": "#0001ff",
+      "text": "#ffffff"
+    }
+  },
+  "content": {
+    "message": "Este site usa cookies para garantir que você obtenha a melhor experiência de navegação. Desativar os cookies do site pode prejudicar a funcionalidade de alguns recursos.",
+    "dismiss": "Concordar e fechar",
+    "link": "Ler mais",
+    "href": "https://policies.google.com/technologies/cookies?hl=pt-BR"
+  }
+});
+
 
