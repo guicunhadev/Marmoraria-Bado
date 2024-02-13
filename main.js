@@ -51,12 +51,11 @@ const bodyMessage = `Nome Completo: ${fullName.value}<br>
 Telefone: ${phone.value}<br>`;
 
   Email.send({
-    SecureToken: "7f571-64cf-4f7e-aa72-d8d2b3fc2a3c",
     Host : "smtp.elasticemail.com",
-    Username : "guilhermealmeida2008@hotmail.com",
-    Password : "471929B9579A1DB048BD10E51EC79496B179",
-    To : 'guilhermealmeida2008@hotmail.com',
-    From : "guilhermealmeida2008@hotmail.com",
+    Username : "contato@badomarmoraria.com.br",
+    Password : "3D8729BEDA4200521FD94C6EF03A0AFF6EDE",
+    To : 'contato@badomarmoraria.com.br',
+    From : "contato@badomarmoraria.com.br",
     Subject : "Você Recebeu o contato de um cliente",
     Body : bodyMessage
 }).then(
